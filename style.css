@@ -8,6 +8,9 @@
   box-sizing:border-box;
   scroll-behavior:smooth;
 }
+*{
+  max-width:100%;
+}
 
 body{
   font-family:'Poppins',sans-serif;
@@ -668,18 +671,21 @@ footer{
   opacity:1;
   transform:translateY(0);
 }
-
 /* =========================
    RESPONSIVO MOBILE
 ========================= */
 
 @media(max-width:900px){
 
-  /* BASE */
+  /* ===== BASE ===== */
 
   html,
   body{
     overflow-x:hidden;
+  }
+
+  body{
+    font-size:15px;
   }
 
   .section{
@@ -687,37 +693,49 @@ footer{
   }
 
   .section-title{
-    margin-bottom:50px;
+    margin-bottom:45px;
+  }
+
+  .section-title span{
+    font-size:13px;
+    letter-spacing:2px;
   }
 
   .section-title h2{
-    font-size:34px;
+    font-size:30px;
     line-height:1.2;
+    margin-top:10px;
   }
 
-  /* HEADER */
+  /* ===== HEADER ===== */
 
   header{
-    padding:18px 6%;
+    padding:14px 6%;
+    background:rgba(2,6,23,0.92);
+    backdrop-filter:blur(10px);
   }
 
   .logo{
-    font-size:20px;
+    gap:10px;
+    font-size:18px;
   }
 
   .logo-icon{
-    width:38px;
-    height:38px;
+    width:36px;
+    height:36px;
+    border-radius:10px;
     font-size:14px;
   }
 
   .menu-toggle{
     display:block;
+    font-size:30px;
     z-index:10001;
   }
 
   nav{
     position:absolute;
+
     top:100%;
     left:0;
 
@@ -728,7 +746,7 @@ footer{
     display:none;
     flex-direction:column;
 
-    padding:25px 6%;
+    padding:20px 6% 30px;
 
     border-top:1px solid #1e293b;
   }
@@ -739,10 +757,10 @@ footer{
 
   nav a{
     padding:14px 0;
-    font-size:18px;
+    font-size:17px;
   }
 
-  /* HERO */
+  /* ===== HERO ===== */
 
   .hero{
 
@@ -756,49 +774,57 @@ footer{
 
     gap:40px;
 
-    padding:140px 6% 70px;
+    padding:130px 6% 70px;
   }
 
   .hero-text{
     width:100%;
   }
 
+  .tag{
+    font-size:12px;
+    padding:9px 16px;
+  }
+
   .hero h1{
     font-size:34px;
-    line-height:1.2;
-    margin:25px 0;
+    line-height:1.15;
+    margin:22px 0;
   }
 
   .hero p{
     font-size:15px;
     line-height:1.7;
-    margin-bottom:30px;
+    margin-bottom:28px;
   }
 
   .hero-buttons{
     flex-direction:column;
     align-items:center;
-    gap:15px;
+    gap:14px;
   }
 
   button,
   .secondary-btn{
     width:100%;
-    max-width:320px;
-
     padding:16px;
-
+    border-radius:18px;
+    font-size:15px;
     text-align:center;
   }
 
   .social-icons{
     justify-content:center;
-    margin-top:30px;
+    margin-top:28px;
+  }
+
+  .social-icons a{
+    width:46px;
+    height:46px;
   }
 
   .hero-image{
     width:100%;
-
     display:flex;
     justify-content:center;
   }
@@ -806,21 +832,18 @@ footer{
   .hero-image img{
     width:100%;
     max-width:360px;
-
     border-radius:24px;
   }
 
-  /* GRIDS */
+  /* ===== CARDS ===== */
 
   .about-grid,
   .services-grid,
   .steps-grid,
-  .testimonial-grid,
-  .stats-grid{
+  .stats-grid,
+  .testimonial-grid{
     grid-template-columns:1fr;
   }
-
-  /* CARDS */
 
   .about-card,
   .service-card,
@@ -828,6 +851,11 @@ footer{
   .testimonial-card,
   .stat-card{
     padding:32px;
+    border-radius:22px;
+  }
+
+  .icon{
+    font-size:36px;
   }
 
   .step-card h3{
@@ -835,10 +863,10 @@ footer{
   }
 
   .stat-card h2{
-    font-size:46px;
+    font-size:44px;
   }
 
-  /* PORTFOLIO */
+  /* ===== PORTFOLIO ===== */
 
   .portfolio-carousel{
     border-radius:24px;
@@ -849,22 +877,25 @@ footer{
   }
 
   .portfolio-overlay{
-    left:25px;
-    right:25px;
-    bottom:25px;
+    left:24px;
+    right:24px;
+    bottom:24px;
   }
 
   .portfolio-overlay h3{
     font-size:28px;
+    line-height:1.1;
   }
 
   .portfolio-overlay p{
+    margin-top:10px;
     font-size:14px;
+    line-height:1.5;
   }
 
   .portfolio-btn{
-    width:50px;
-    height:50px;
+    width:48px;
+    height:48px;
     font-size:18px;
   }
 
@@ -876,51 +907,87 @@ footer{
     right:12px;
   }
 
-  /* FAQ */
+  /* ===== FAQ ===== */
 
   .faq-item{
-    padding:28px;
+    padding:26px;
+    border-radius:18px;
   }
 
-  /* FORM */
+  .faq-item h3{
+    font-size:18px;
+    line-height:1.4;
+  }
+
+  /* ===== FORM ===== */
+
+  .contact-form{
+    max-width:520px;
+    margin:0 auto;
+    gap:12px;
+  }
 
   .form-row{
     flex-direction:column;
-    gap:15px;
+    gap:12px;
   }
 
   .contact-form input,
   .contact-form textarea{
-    padding:16px;
+    padding:20px;
+    border-radius:20px;
     font-size:15px;
   }
 
-  /* FOOTER */
+  .contact-form textarea{
+    min-height:220px;
+  }
+
+  .contact-form button{
+    height:72px;
+    border-radius:22px;
+    font-size:18px;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus{
+    border:1px solid #38bdf8;
+    box-shadow:0 0 0 4px rgba(56,189,248,0.1);
+  }
+
+  /* ===== FOOTER ===== */
 
   footer{
     padding:40px 20px;
   }
 
-  /* FLOAT BUTTONS */
+  .footer-social{
+    gap:18px;
+  }
+
+  /* ===== FLOAT BUTTONS ===== */
 
   .whatsapp-float{
     width:58px;
     height:58px;
-    font-size:24px;
 
     right:18px;
-    bottom:18px;
+    bottom:22px;
+
+    font-size:24px;
   }
 
   #backToTop{
-    width:50px;
-    height:50px;
+    width:52px;
+    height:52px;
 
-    right:22px;
-    bottom:90px;
+    right:21px;
+    bottom:95px;
+
+    font-size:20px;
   }
 
-  /* BLURS */
+  /* ===== BLURS ===== */
 
   .blur{
     width:220px;
